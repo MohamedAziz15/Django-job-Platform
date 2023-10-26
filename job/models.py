@@ -27,10 +27,16 @@ class job(models.Model):
     category = models.ForeignKey(
         'category', on_delete=models.SET_NULL, related_name='job_category', null=True, blank=True)
 
+    def __str__(self) -> str:
+        return self.title
+
 
 class category(models.Model):
     name = models.CharField(max_length=30)
     logo = models.ImageField(max_length=30)
+
+    def __str__(self) -> str:
+        return self.name
 
 
 class company(models.Model):
@@ -39,3 +45,6 @@ class company(models.Model):
     subtitle = models.TextField(max_length=1000)
     website = models.URLField()
     email = models.EmailField()
+
+    def __str__(self) -> str:
+        return self.name
