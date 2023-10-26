@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import category, company, job
 
-# Register your models here.
+
+admin.site.register(job)
+admin.site.register(company)
+admin.site.register(category)
