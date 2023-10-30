@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static  %}
 {% block body %}
     <main>
 
@@ -196,27 +196,22 @@
                                             <!-- Select job items start -->
                                             <div class="select-job-items">
                                                 <span>Sort by</span>
-                                                <select name="select">
-                                                    <option value="">None</option>
-                                                    <option value="">job list</option>
-                                                    <option value="">job list</option>
-                                                    <option value="">job list</option>
-                                                </select>
+                                                 
                                             </div>
                                             <!--  Select job items End-->
                                         </div>
                                     </div>
-                                </div>
+                                </div>  
                                 <!-- Count of Job list End -->
                                 <!-- single-job-content -->
                                 {% for object  in Jobs  %}       
                                 <div class="single-job-items mb-30">
                                     <div class="job-items">
                                         <div class="company-img">
-                                            <a href="#"><img src="{{object.company.logo.url}}" alt=""></a>
+                                            <a href="#"><img src="{{object.company.logo.url}}" style="width:85px;height:85px" alt=""></a>
                                         </div>
                                         <div class="job-tittle job-tittle2">
-                                            <a href="#">
+                                            <a href="/jobs/{{object.slug}}">
                                                 <h4>{{object}}</h4>
                                             </a>
                                             <ul>

@@ -1,7 +1,7 @@
 from django.db import models
 from django_countries.fields import CountryField
 from django.utils import timezone
-
+from django.utils.text import slugify
 # Create your models here.
 
 jobType = (
@@ -26,9 +26,14 @@ class job(models.Model):
     experience = models.IntegerField()
     category = models.ForeignKey(
         'category', on_delete=models.SET_NULL, related_name='job_category', null=True, blank=True)
+    slug = models.SlugField(null=True, blank=True)
 
     def __str__(self) -> str:
         return self.title
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(job, self).save(*args, **kwargs)  # Call the real save() method
 
 
 class category(models.Model):
