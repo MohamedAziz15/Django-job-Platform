@@ -1,9 +1,12 @@
 import os
 import django
+from django.conf import settings
+
 
 from faker import Faker
 
-import Faker 
+import Faker
+
 from job.models import company, category, job
 import random
 
@@ -11,6 +14,7 @@ import random
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings")
 django.setup()
 fake = Faker()
+
 
 def create_category(n):
     fake = Faker()
