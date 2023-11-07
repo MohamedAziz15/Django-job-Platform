@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'django.contrib.humanize',
-    "django-countries",
     'rest_framework',
+    'django_countries',
     'django_filters',
 
 
