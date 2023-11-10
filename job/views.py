@@ -3,6 +3,7 @@ from .models import job
 
 
 def job_list(request):
+    #all_jobs = job.objects.all().order_by('-id')
     all_jobs = job.objects.all()
     return render(request, 'job/job_list.html', {'jobs': all_jobs})
 

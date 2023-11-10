@@ -193,7 +193,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="count-job mb-35">
-                                            <span>{{job|length}} Jobs found</span>
+                                            <span>{{jobs|length}} Jobs found</span>
                                             <!-- Select job items start -->
                                             <div class="select-job-items">
                                                 <span>Sort by</span>
@@ -205,7 +205,7 @@
                                 </div>  
                                 <!-- Count of Job list End -->
                                 <!-- single-job-content -->
-                                {% for object  in Jobs  %}       
+                                {% for object  in jobs  %}       
                                 <div class="single-job-items mb-30">
                                     <div class="job-items">
                                         <div class="company-img">
@@ -217,7 +217,7 @@
                                             </a>
                                             <ul>
                                                 <li> {{object.company}}</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>{{object.location}}</li>
+                                                <li><i class="fas fa-map-marker-alt"></i>{{object.Location}}</li>
                                                 <li>${{object.salary_start}} - ${{object.salary_end}}</li>
                                             </ul>
                                         </div>
