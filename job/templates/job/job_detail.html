@@ -1,7 +1,12 @@
  {% extends 'base.html' %}
  {% load static  %}
  {% block body %}
- 
+ <style>
+    li{
+        list-style-type: decimal;
+    }
+
+ </style>
     <main>
 
         <!-- Hero Area Start-->
@@ -37,7 +42,7 @@
                                     </a>
                                     <ul>
                                         <li>{{job.company}}</li>
-                                        <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
+                                        <li><i class="fas fa-map-marker-alt"></i>{{job.Location}}</li>
                                         <li>${{job.salary_start}} - ${{job.salary_end}}</li>
                                     </ul>
                                 </div>
@@ -49,9 +54,8 @@
                             <div class="post-details1 mb-50">
                                 <!-- Small Section Tittle -->
                                 <div class="small-section-tittle">
-                                    <h4>Job Description</h4>
+                                    <h4>{{job.description|safe}}</h4>
                                 </div>
-                                <p>{{job.description}}</p>
                             </div>
                           
                         </div>
