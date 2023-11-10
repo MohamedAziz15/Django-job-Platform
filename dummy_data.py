@@ -3,9 +3,9 @@ import django
 from django.conf import settings
 
 
+
 from faker import Faker
 
-import Faker
 
 from job.models import company, category, job
 import random

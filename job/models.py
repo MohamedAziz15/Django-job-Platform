@@ -35,6 +35,8 @@ class job(models.Model):
         self.slug = slugify(self.title)
         super(job, self).save(*args, **kwargs)  # Call the real save() method
 
+    class Meta:
+        ordering = ['-id']
 
 class category(models.Model):
     name = models.CharField(max_length=30)
