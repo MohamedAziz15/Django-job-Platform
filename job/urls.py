@@ -1,11 +1,13 @@
 from django.urls import path
-from .views import job_list, job_detail
+from .views import job_list, job_detail, jobApply
 from .api import job_list_api , job_detail_api, JobListAPI , JobDetailAPI
 
 
 urlpatterns = [
     path('', job_list),
     path('<slug:slug>',job_detail),
+    path('<slug:slug>/apply',jobApply.as_view()),
+
     
 #API as functions
     #path('api/list',job_list_api),

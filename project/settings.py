@@ -43,13 +43,18 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'django.contrib.humanize',
-    'rest_framework',
     'django_countries',
-    'django_filters',
 
 
     # 3rd apps
     'django_summernote',
+    'rest_framework',    
+    'django_filters',
+    'rest_framework.authtoken',
+    "bootstrap4",
+
+
+
 
 
     # my apps
